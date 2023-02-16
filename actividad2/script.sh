@@ -1,8 +1,9 @@
-usuario="JhonathanTocay2020"
+echo "Escriba el Nombre de Usuario de GitHub: "
+read usuario
 echo "Usuario:  ${usuario}"
 curl --request GET https://api.github.com/users/${usuario} > resp.json
 id=$(jq '.id' resp.json)
-created_at=$(jq '.id' resp.json)
+created_at=$(jq '.created_at' resp.json)
 echo ""
 fecha=$(date +"%F-%H-%M-%S")
 mkdir /tmp/$fecha
