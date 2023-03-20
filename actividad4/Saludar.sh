@@ -1,0 +1,1 @@
+echo "Buen Dia, Bienvenido, la fecha de hoy es: $(date)"
